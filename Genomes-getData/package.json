@@ -1,0 +1,114 @@
+{
+  "name": "Genomes",
+  "version": "1.0.0",
+  "description": "Genome sequence visualizer",
+  "scripts": {
+    "gunicorn": "gunicorn $GUNICORN_PARAMS --chdir server entry:app",
+    "start": "webpack && python server/server.py",
+    "test": "NODE_ENV=test BABEL_JEST_STAGE=0 jest",
+    "build": "node_modules/.bin/webpack --progress --profile --colors",
+    "dev": "node_modules/.bin/webpack-dev-server --port 2992 --content-base build/public --hot --inline --display-error-details",
+    "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx client tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThunderousFigs/Genomes.git"
+  },
+  "engines": {
+    "node": "0.10",
+    "npm": "2.10"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "Python",
+    "webpack",
+    "Flask",
+    "PostgreSQL"
+  ],
+  "author": [
+    "Gar Lee",
+    "Peter Lollo",
+    "Chris Bassano",
+    "Alex Anthony"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "6.3.14",
+    "flummox": "3.6.8",
+    "grunt-exec": "^0.4.6",
+    "grunt-webpack": "^1.0.11",
+    "lodash": "4.0.0",
+    "material-ui": "^0.15.0-alpha.1",
+    "node-libs-browser": "1.0.0",
+    "promise": "7.1.1",
+    "react": "0.14.7",
+    "react-dom": "0.14.6",
+    "react-hot-loader": "^1.3.0",
+    "react-jss": "2.0.1",
+    "react-redux": "4.0.6",
+    "react-router": "2.0.0-rc5",
+    "react-svg-loader": "0.0.6",
+    "react-tap-event-plugin": "^0.2.2",
+    "redux": "3.0.5",
+    "redux-logger": "2.4.0",
+    "redux-promise": "0.5.1",
+    "redux-thunk": "1.0.3",
+    "superagent-promise": "1.1.0",
+    "webpack": "1.12.12",
+    "webpack-manifest-plugin": "^1.0.0",
+    "whatwg-fetch": "^0.11.0"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "3.2.0",
+    "babel": "6.3.26",
+    "babel-core": "6.3.26",
+    "babel-eslint": "5.0.0-beta10",
+    "babel-jest": "6.0.1",
+    "babel-loader": "6.2.1",
+    "babel-plugin-react-transform": "2.0.0",
+    "babel-plugin-transform-runtime": "6.4.3",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "babel-runtime": "6.3.19",
+    "clean-webpack-plugin": "0.1.6",
+    "coveralls": "2.11.6",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-loader": "1.2.0",
+    "eslint-plugin-babel": "3.0.0",
+    "eslint-plugin-react": "^4.0.0",
+    "estraverse-fb": "^1.3.1",
+    "export-files-webpack-plugin": "0.0.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-force": "^1.0.0",
+    "html-webpack-plugin": "2.7.1",
+    "jest": "0.1.40",
+    "jest-cli": "0.8.2",
+    "jsx-loader": "0.13.2",
+    "mkdirp": "0.5.1",
+    "react-transform-hmr": "1.0.1",
+    "string-replace-webpack-plugin": "0.0.3",
+    "webpack-dev-server": "1.14.1"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ],
+    "testFileExtensions": [
+      "test.js",
+      "test.jsx"
+    ],
+    "testDirectoryName": "tests"
+  }
+}
